@@ -1,0 +1,289 @@
+/* Runway Bars Component */
+.container {
+  padding: 2.5rem;
+  background: var(--card-bg);
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.container:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Header with amount and status */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.mainAmount {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.amountCurrency {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.amountValue {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.amountLabel {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-left: 0.25rem;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid;
+  border-radius: 24px;
+  background: var(--card-bg);
+  font-weight: 600;
+  font-size: 1.125rem;
+  white-space: nowrap;
+}
+
+.statusEmoji {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.statusText {
+  line-height: 1;
+}
+
+/* Runway bars */
+.runwayContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.barSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.barLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.barLabelText {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.barValue {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.barTrack {
+  position: relative;
+  height: 32px;
+  background: var(--color-gauge-bg);
+  border-radius: 16px;
+  overflow: visible;
+}
+
+/* Time bar fill */
+.barFillTime {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+  border-radius: 16px;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+/* Spending bar zones (background) */
+.barZones {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
+  opacity: 0.15;
+}
+
+.zoneAmazing {
+  background: var(--color-zone-amazing);
+}
+
+.zoneGood {
+  background: var(--color-zone-good);
+}
+
+/* Spending bar fill (foreground) */
+.barFillSpending {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 16px;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease;
+  z-index: 1;
+}
+
+/* Goal marker (80% default) */
+.goalMarker {
+  position: absolute;
+  top: -4px;
+  height: calc(100% + 8px);
+  transform: translateX(-50%);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.goalMarkerLine {
+  width: 3px;
+  height: 100%;
+  background: var(--color-goal-marker);
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+/* 100% income marker */
+.incomeMarker {
+  position: absolute;
+  top: -4px;
+  height: calc(100% + 8px);
+  transform: translateX(-50%);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.incomeMarkerLine {
+  width: 3px;
+  height: 100%;
+  background: var(--color-income-marker);
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Status message */
+.statusMessage {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+}
+
+/* Budget info footer */
+.budgetInfo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.budgetItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.budgetLabel {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-tertiary);
+  font-weight: 600;
+}
+
+.budgetValue {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.budgetSubtext {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  font-weight: 400;
+  margin-top: 0.25rem;
+}
+
+.budgetDivider {
+  width: 1px;
+  height: 2.5rem;
+  background: var(--border-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .amountValue {
+    font-size: 2.75rem;
+  }
+
+  .statusBadge {
+    font-size: 1rem;
+    padding: 0.625rem 1.25rem;
+  }
+
+  .barTrack {
+    height: 24px;
+    border-radius: 12px;
+  }
+
+  .barFillTime,
+  .barFillSpending {
+    border-radius: 12px;
+  }
+
+  .budgetInfo {
+    gap: 1.5rem;
+  }
+
+  .budgetValue {
+    font-size: 1.125rem;
+  }
+}

@@ -1,3 +1,6 @@
+/* Import distinctive fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap');
+
 /* CSS Reset and Base Styles */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -6,12 +9,73 @@
 }
 
 :root {
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.5;
+  /* Fonts */
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
   font-weight: 400;
 
-  color: #213547;
-  background-color: #ffffff;
+  /* Design System - Light Mode Colors */
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #f1f3f5;
+  --card-bg: #ffffff;
+
+  --text-primary: #1a1d29;
+  --text-secondary: #4a5568;
+  --text-tertiary: #718096;
+
+  --border-color: #e2e8f0;
+
+  /* Brand Colors */
+  --color-primary: #2d5a8c;
+  --color-primary-light: #4a7bb8;
+  --color-primary-bg: rgba(45, 90, 140, 0.1);
+
+  /* Status Colors (Legacy - Budget Pacing) */
+  --color-success: #38a169;
+  --color-success-light: #48bb78;
+  --color-success-bg: rgba(56, 161, 105, 0.1);
+
+  --color-on-track: #3182ce;
+  --color-on-track-light: #4299e1;
+  --color-on-track-bg: rgba(49, 130, 206, 0.1);
+
+  --color-danger: #e53e3e;
+  --color-danger-light: #fc8181;
+  --color-danger-bg: rgba(229, 62, 62, 0.1);
+
+  /* Success Level Colors (Income-Based) */
+  --color-amazing: #10b981;
+  --color-amazing-light: #34d399;
+  --color-amazing-bg: rgba(16, 185, 129, 0.1);
+
+  --color-good: #3b82f6;
+  --color-good-light: #60a5fa;
+  --color-good-bg: rgba(59, 130, 246, 0.1);
+
+  --color-over: #ef4444;
+  --color-over-light: #f87171;
+  --color-over-bg: rgba(239, 68, 68, 0.1);
+
+  /* Runway Bar Zones */
+  --color-zone-amazing: linear-gradient(90deg, #10b981, #34d399);
+  --color-zone-good: linear-gradient(90deg, #fbbf24, #f59e0b);
+  --color-zone-over: linear-gradient(90deg, #ef4444, #dc2626);
+
+  /* Goal Markers */
+  --color-goal-marker: #6366f1;
+  --color-income-marker: #1f2937;
+
+  /* Gauge specific */
+  --color-gauge-bg: rgba(0, 0, 0, 0.08);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.12);
+
+  /* Other properties */
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -61,10 +125,36 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-/* Dark mode support (optional for Phase 4) */
+/* Dark mode support (Phase 4) */
 @media (prefers-color-scheme: dark) {
   :root {
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+    /* Dark Mode Colors */
+    --bg-primary: #0f1419;
+    --bg-secondary: #1a1f2e;
+    --card-bg: #1e2433;
+
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    --text-tertiary: #718096;
+
+    --border-color: #2d3748;
+
+    /* Legacy status colors (budget pacing) - backgrounds adjust for dark */
+    --color-success-bg: rgba(56, 161, 105, 0.15);
+    --color-on-track-bg: rgba(49, 130, 206, 0.15);
+    --color-danger-bg: rgba(229, 62, 62, 0.15);
+    --color-primary-bg: rgba(45, 90, 140, 0.15);
+
+    /* Income-based success levels - backgrounds adjust for dark */
+    --color-amazing-bg: rgba(16, 185, 129, 0.15);
+    --color-good-bg: rgba(59, 130, 246, 0.15);
+    --color-over-bg: rgba(239, 68, 68, 0.15);
+
+    /* Gauge adjusts for dark */
+    --color-gauge-bg: rgba(255, 255, 255, 0.08);
+
+    /* Shadows are deeper in dark mode */
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
+    --shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.35);
   }
 }
