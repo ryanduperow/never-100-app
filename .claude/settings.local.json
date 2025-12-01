@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet --version:*)",
+      "Bash(az:*)",
+      "Bash(azd version:*)",
+      "Bash(docker --version:*)",
+      "Bash(dotnet workload install:*)",
+      "Bash(winget install:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

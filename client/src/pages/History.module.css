@@ -1,0 +1,15 @@
+.history {
+  padding: 1.5rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+.placeholder {
+  color: #6b7280;
+  font-size: 1rem;
+}

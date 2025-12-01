@@ -1,0 +1,153 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio
+.vs/
+.vscode/
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# User secrets
+**/appsettings.Development.json
+secrets.json
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-store/
+dist/
+dist-ssr/
+*.local
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+
+# Editor directories and files
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Azure
+.azure/
+*.azd/
+.env.azure
+azd-*.env
+
+# Aspire
+.aspire/
+
+# Testing
+coverage/
+*.coverage
+*.coveragexml
+TestResults/
+
+# Build outputs
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+!packages/build/
+
+# ReSharper
+_ReSharper*/
+*.ReSharper
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*~
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Secrets and credentials
+*.pfx
+*.p12
+*.key
+*.pem
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json.template
+
+# Azure Key Vault
+KeyVault/
+
+# Application Insights
+ApplicationInsights.config
+
+# Local database files
+*.mdf
+*.ldf
+*.ndf
+
+# Cosmos DB Emulator
+CosmosDB.Emulator/
+
+# Project planning files
+PLAN.md
